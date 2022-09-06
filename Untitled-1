@@ -1,0 +1,70 @@
+
+
+https://bloclibrary.dev/#/faqs?id=when-to-use-equatable
+
+
+
+
+https://github.com/felangel/bloc/issues/292 - why state should be immutable
+
+
+
+
+https://medium.flutterdevs.com/explore-immutable-data-structures-in-dart-flutter-86c350b7d014
+
+
+
+https://school.geekwall.in/p/RUnGg-acu - immutable video
+
+
+
+https://aglowiditsolutions.com/blog/flutter-best-practices/ -- best practices
+
+
+
+https://itnext.io/how-to-architect-a-production-level-app-in-flutter-251335cae1bb  -> throttle and debouncing
+
+easy debouncing
+---------------
+
+
+https://flutterward.wordpress.com/2021/09/19/how-to-do-debouncing-in-flutter/
+
+
+https://medium.com/flutter-taipei/flutter-music-search-app-with-unit-and-widget-tests-f516bdf063b4  -- best
+
+
+
+https://github.com/RashmiRanganathan/clean-code-architecture-flutter -- clean code arch
+
+
+
+Advantages
+
+- api calls when ui theread
+- multiple developer(can work here also)
+- 
+
+
+disadvantage:
+
+
+
+
+question
+- thats why we are showing a loader what saga 
+
+
+- can we have a global state and states per page
+
+
+
+
+
+
+for api
+
+multiple api calls
+how we can handle
+
+
