@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_arch/cubit/time_cubit.dart';
+import 'package:flutter_bloc_arch/data/cubit/time_cubit.dart';
 
 void main() {
   runApp(const MyApp());

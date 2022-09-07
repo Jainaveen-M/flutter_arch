@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_bloc_arch/repo/time.dart';
+import 'package:flutter_bloc_arch/data/repo/time.dart';
 import 'package:meta/meta.dart';
 
 part 'time_state.dart';
