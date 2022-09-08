@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -41,8 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
-  //final futureGroup = FutureGroup();
-  void futureTest() {}
+  Timer? _debounceTimer;
+
+  void debouncing({required Function() fn, int waitForMs = 500}) {
+    // if this function is called before 500ms [waitForMs] expired
+    //cancel the previous call
+    _debounceTimer?.cancel();
+    // set a 500ms [waitForMs] timer for the [fn] to be called
+    _debounceTimer = Timer(Duration(milliseconds: waitForMs), fn);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: BlocBuilder<TimeCubit, TimeState>(
         builder: (context, state) {
-          log(state.counter.toString());
-          log("Builder");
+          log("btn pressed count ${state.counter}");
           return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -66,7 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      BlocProvider.of<TimeCubit>(context).updateTimeLocation();
+                      // BlocProvider.of<TimeCubit>(context).updateTimeLocation();
+                      BlocProvider.of<TimeCubit>(context).increment();
+                      debouncing(
+                          fn: (() => BlocProvider.of<TimeCubit>(context)
+                              .updateTimeLocation()));
                     },
                     child: const Text("Get Time"))
               ],

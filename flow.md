@@ -12,8 +12,3 @@ view -> bloc -> repo -> service
 
 
 
-Advantages
------------
-
-- less boilerplate code
-- multiple developers can work on different part of the apps
